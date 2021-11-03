@@ -1,0 +1,26 @@
+version: 0.2
+phases:
+  install:
+    runtime-version:
+      nodejs: 12
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies
+      - npm install
+  build:
+    commands:
+      - echo Build completed on 'date'
+  post_build:
+    commands:
+      - echo Build completed on 'date'
+# Include only the files required to run your application.
+artifacts:
+  files: 
+    - bin/**/*
+    - controllers/**/*
+    - models/**/*
+    - public/**/*
+    - routes/**/*
+    - app.js
+    - package.json
+    - node_modules/**/*
